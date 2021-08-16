@@ -1,0 +1,225 @@
+.content
+{
+    position: relative;
+    width:100%;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+.cards
+{
+    position:relative;
+    width:100%;
+    margin:50px;
+    display:grid;
+    grid-template-columns: repeat(auto-fit, minmax(100%,1fr));
+}
+.cards .card
+{
+    position:relative;
+    display:flex;
+    flex-direction: row;
+    margin:10px 0;
+    background: white;
+}
+.cards .card:nth-child(even)
+{
+    flex-direction: row-reverse;
+}
+.cards .card .imgBox
+{
+    position: relative;
+    width:50%;
+    height:400px;
+    background: white;
+}
+.cards .card .imgBox img
+{
+    position: absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+.cards .card .waterCard
+{
+    position:relative;
+    width:50%;
+    height:400px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    color:white;
+}
+
+.cards .card .waterCard .text
+{
+    position: relative;
+    padding: 40px;
+    overflow: hidden;
+}
+.cards .card .waterCard .text
+{
+    display: block;
+}
+@keyframes animate
+{
+    0%
+    {
+        transform: translate(-50%, -75%) rotate(0deg);
+    }
+    100%
+    {
+        transform: translate(-50%, -75%) rotate(360deg);
+    }
+}
+.card:nth-child(1) .imgBox img
+{
+    border-top-left-radius: 200px;
+}
+
+.card:nth-child(3n-2) .waterCard
+{
+    background:#2E86C1;
+}
+.card:nth-child(3n-1) .waterCard .liquid:before
+{
+    animation: animate 6s linear infinite !important;   
+}
+.card:nth-child(3n-1) .waterCard
+{
+    background:#28B463;
+}
+.card:nth-child(3n) .waterCard .liquid:before
+{
+    animation: animate 4s linear infinite !important;      
+}
+.card:nth-child(3n) .waterCard .liquid:after
+{
+    animation: animate 8s linear infinite !important;      
+}
+.card:nth-child(3n) .waterCard
+{
+    background:#D4AC0D;
+}
+
+@media (min-width:1100px)
+{
+    .cards .card .textBox .liquid:before,
+    .cards .card .textBox .liquid::after
+    {
+        top:-20%;
+    }
+}
+@media screen and (min-width:721px) and (max-width:1280px)
+{
+    .cards .card .imgBox,
+    .cards .card .waterCard
+    {
+        height:300px;
+    }
+    .card:nth-child(1) .imgBox img
+{
+    border-top-left-radius: 150px;
+}
+}
+@media(max-width:720px)
+{
+    .cards .card
+    {
+        flex-direction: column;
+        margin:10px 0;
+    }
+    .cards .card:nth-child(even)
+    {
+        flex-direction: column;
+    }
+    .cards .card .imgBox,
+    .cards .card .waterCard
+    {
+        width:100%;
+    }
+    .cards .card .waterCard
+    {
+        height:200px;
+    }
+    .cards .card .imgBox
+    {
+        height:250px;
+    }
+    .card:nth-child(1) .imgBox img
+    {
+        border-top-left-radius: 0px;
+    }
+}
+.content .header
+{
+    position:relative;
+    width:100%;
+    height:200px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+.content .header .text
+{
+    position:relative;
+    color:white ;
+    text-align: right;
+}
+.content .header .text h1
+{
+    white-space: nowrap;
+    font-size: 4em;
+}
+.content .download p
+{
+    color:white;
+    font-size:1.5em;
+    font-weight: 750;
+}
+.content .download
+{
+    background-color:#28B463;
+    border-radius: 30px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    padding: 12px 24px;
+    justify-content: center;
+    align-items: center;
+    transition:0.2s;
+    text-decoration:none;
+}
+.content .download:hover
+{
+    background-color: #7D3C98;
+}
+@media screen and (max-width:720px)
+{
+    .content .header .text h1
+    {
+        font-size: 3em;
+    }
+    .content .header .text
+    {
+        color:white;
+    }
+    .content .header
+    {
+        justify-content: center
+    }
+    .content .header .text
+    {
+        text-align: center;
+    }
+}
+@media screen and (min-width:991px)
+{
+    .content
+    {
+        margin-top:80px;
+    }
+}

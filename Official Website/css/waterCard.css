@@ -1,0 +1,76 @@
+.waterCard
+{
+    position: relative;
+    overflow: hidden;
+}
+.waterCard
+{
+    display: block;
+}
+.waterCard .text
+{
+    position: relative;
+    z-index: 1;
+    color:white;
+}
+.waterCard .liquid
+{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    padding-top: 100%;
+    transition: 0.5s;
+}
+.waterCard .liquid:before,
+.waterCard .liquid::after
+{
+    content:'';
+    position:absolute;
+    width:200%;
+    height:200%;
+    top:-40%;
+    left:50%;
+    transform: translate(-50%,-75%);
+    background:#000;
+}
+.waterCard:nth-child(3n-2)
+{
+    background:#2E86C1;
+}
+.waterCard:nth-child(3n-1) .liquid:before
+{
+    animation: animate 6s linear infinite !important;   
+}
+.waterCard:nth-child(3n-1)
+{
+    background:#28B463;
+}
+.waterCard:nth-child(3n) .liquid:before
+{
+    animation: animate 4s linear infinite !important;      
+}
+.waterCard:nth-child(3n) .liquid:after
+{
+    animation: animate 8s linear infinite !important;      
+}
+.waterCard:nth-child(3n)
+{
+    background:#D4AC0D;
+}
+.waterCard .liquid:before
+{
+    border-radius: 45%;
+    background: rgba(40, 40, 40, 1);
+    animation: animate 5s linear infinite;
+}
+.waterCard .liquid::after
+{
+    border-radius: 40%;
+    background: rgba(40, 40, 40, 0.5);
+    animation: animate 10s linear infinite;    
+}
+.waterCard:hover .liquid
+{
+    top:-100%;
+}

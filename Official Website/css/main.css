@@ -1,0 +1,87 @@
+.content
+{
+    position: relative;
+    width:100%;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.content .textBox
+{
+    position: relative;
+    max-width:600px;
+    margin-right:20px;
+}
+.content .textBox h2
+{
+    color:#222;
+    font-size: 3em;
+    margin-bottom: 10px;
+    line-height: 1.4em;
+    font-weight: 700;
+}
+.content .textBox p
+{
+    color: black;
+    font-size: 1.25em;
+}
+.BAM
+{
+    font-weight: 650;
+    white-space: nowrap;
+}
+.content .textBox a
+{
+    display: inline-block;
+    margin-top:20px;
+    padding: 8px 20px;
+    background: #2E86C1;
+    color: white;
+    border-radius: 40px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-decoration:none;
+}
+.content .textBox a:hover
+{
+    background:#28B463;
+    transition: 0.2s;
+}
+
+.content .imgBox
+{
+    width:700px;
+    display:flex;
+    justify-content: flex-end;
+}
+.content .imgBox img
+{
+    max-width: 400px;
+}
+
+@media (max-width:990px)
+{
+    .content
+    {
+        flex-direction: column;
+    }
+    .content .textBox,
+    .content .imgBox
+    {
+        max-width: 100%;
+    }
+    .content .textBox
+    {
+        margin:40px 0;
+    }
+    .content .imgBox
+    {
+        justify-content: center;
+    }
+    .content .imgBox img
+    {
+        max-width: 60%;
+    }
+
+    
+}
